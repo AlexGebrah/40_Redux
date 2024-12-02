@@ -7,14 +7,17 @@ const Operation = () => {
     const dispatch = useDispatch();
 
     return (
-        <div>
-            <button onClick={() => dispatch(withdraw(sum))}>Withdraw</button>
+        <div className={'flex justify-center'}>
+            <button className={'backdrop-blue-500 hover: bg-blue-600 text-white font-bold py-2 px-4 rounded-lg text-lg'}
+                onClick={() => dispatch(withdraw(sum))}>Withdraw</button>
             <input
+                className={'text-center border rounded-lg'}
                 type={'number'}
                 onChange={e => setSum(+e.target.value)}
                 value={sum}
             />
-            <button onClick={() => dispatch(deposit(sum))}>Deposit</button>
+            <button className={'backdrop-blue-500 hover: bg-blue-600 text-white font-bold py-2 px-4 rounded-lg text-lg'}
+                onClick={() => dispatch(deposit(sum))}>Deposit</button>
         </div>
     );
 };
